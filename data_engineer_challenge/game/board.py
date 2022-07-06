@@ -27,14 +27,9 @@ class Board:
         # Paths ocupated by Snake
         paths_ocupated = [(n[0], n[1]) for n in self.snake.args]
         
-        # Head and tail
-        path_head = np.array([self.snake.args[0]])
-        path_tail = np.array(self.snake.args[-1])
-        
         snakes = []
         snakes.append(paths_ocupated)
         mov = np.array([[1,0], [-1,0], [0,1], [0,-1]])
-        total = 0
         
         for n in range(self.depth.n):
             new_snakes = []
